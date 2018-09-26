@@ -23,8 +23,7 @@ class User(db.Model, UserMixin):
     posts = db.relationship('Post', backref='author', lazy=True)
 
     def __repr__(self):
-        return f"User('{self.username}', '{self.email}', '{self.image}')"
-
+         return "User('{}', '{}', '{}')".format(self.username,self.email,self.image)
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -36,4 +35,4 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
-        return f"Title('{self.title}', '{self.date_posted}')"
+        return "Title('{}', '{}')".format(self.title,self.date_posted)
