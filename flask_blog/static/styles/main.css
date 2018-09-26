@@ -120,6 +120,8 @@ a{
 }
 .post-card:hover {
     box-shadow: 16px 16px 16px 0 rgba(0,0,0,0.2);
+    height:110%;
+    width:120%;
 }
 
 
