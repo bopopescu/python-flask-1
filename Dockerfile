@@ -7,6 +7,7 @@ WORKDIR /Music/flask-blog
 COPY requirements.txt requirements.txt
 RUN python -m venv venv
 RUN pip3 install --upgrade setuptools
+RUN pip3 install --upgrade pip
 RUN venv/bin/pip3 install -r requirements.txt
 RUN venv/bin/pip3 install gunicorn
 
